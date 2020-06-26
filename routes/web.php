@@ -18,4 +18,4 @@
 
 Route::get('/home' , 'PagesController@index');
 Route::get('/clients' , 'ClientController@index');
-Route::post('/clients' , 'ClientController@store');
+Route::post('/clients/cadastrar' , 'ClientController@store');

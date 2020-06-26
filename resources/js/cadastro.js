@@ -1,15 +1,39 @@
-// baseUrl: ''
+baseUrl: '/clients/cadastrar';
 
-// $('#cadastrar').click(() => {
-//     $.ajax({
-//         url: "Controllers/ClientsController",
-//         type: "post",
-//         data: values,
-//         // method:'create',
-//         success: function (response) {
+$('#cadastro').click(() => {
 
-//             // You will get response from your PHP page (what you echo or print)
-//         },
 
-//     });
-// })
+
+
+    e.preventDefault();
+
+
+
+    var name = $("input[name=name]").val();
+
+    var lastname = $("input[name=lastname]").val();
+
+    var address = $("input[name=address]").val();
+
+
+
+    $.ajax({
+
+        type: 'POST',
+
+        url: '/ajaxRequest',
+
+        data: { name: name, lastname: lastname, address: address },
+
+        success: function (data) {
+
+            alert(data.success);
+
+        }
+
+
+
+
+
+    });
+})
