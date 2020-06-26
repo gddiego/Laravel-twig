@@ -10,7 +10,10 @@ class PagesController extends Controller
     {
       return view ('pages.home.home', [
           'nome' => 'Diego Mendes',
-          'title' => 'Home',
+          'Endereco' => 'Rua Antonio Joao. 15',
+          'Bairro' => 'Jardim Aeroporto',
+
+
       ]);
     }
 

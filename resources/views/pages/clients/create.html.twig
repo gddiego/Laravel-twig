@@ -4,6 +4,8 @@
 <form class='mt-5'>
 	<div class="form-group" method="post">
 		<label for="exampleInputEmail1">Nome</label>
+
+		<input type="hidden" name="_token" value="<?php echo csrf_token(); ?>">
 		<input name='name' type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
 		<small id="emailHelp" class="form-text text-muted">cadastro simples.</small>
 	</div>
@@ -16,11 +18,8 @@
 		<input name='address' type="text" class="form-control" id="exampleInputPassword1">
 	</div>
 
-	{# <div class="form-group form-check">
-																																																				<input type="checkbox" class="form-check-input" id="exampleCheck1">
-																																																				<label class="form-check-label" for="exampleCheck1">Finalizar</label>
-																																																			</div> #}
+
+	<button id='cadastro' class="btn btn-primary">Cadastrar</button>
 
 </form>
-<button id='cadastro' class="btn btn-primary">Cadastrar</button>
 {%endblock%}
