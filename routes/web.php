@@ -11,11 +11,19 @@
 |
 */
 
-// Route::get('', function () {
-//     return view('welcome');
-// });
+Route::get('', function () {
+    return view('welcome');
+});
 
 
-Route::get('/home' , 'PagesController@index');
-Route::get('/clients' , 'ClientController@index');
-Route::post('/clients/cadastrar' , 'ClientController@store');
+Route::get('/home', 'PagesController@index')->name('homepage');
+Route::get('/principal', 'ClientController@create')->name('pricipal');
+
+Route::get('/servico-construcao', function () {
+    return view('pages.clients.servicos-construcao');
+});
+
+Route::post('/servico-construcao', 'ClientController@index')->name('construcao');
+
+Route::post('/cadastrar', 'ClientController@store');
+Route::get('/index', 'ClientController@index')->name('table');

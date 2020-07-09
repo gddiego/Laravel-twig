@@ -4,18 +4,16 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class client extends Model
+class modelo_descricao extends Model
 {
     protected $fillable = [
-        'name', 'lastname', 'email', 'address',
+        'descricao', 'detalhes', 'marca', 'aluguel',
     ];
 
     protected $guarded = [
         'id',
-        'created_at',
-        'update_at'
+        // 'created_at',
+        // 'update_at'
     ];
-    protected $table = 'clients';
-
-
+    protected $table = 'public.modelo_descricao';
 }
